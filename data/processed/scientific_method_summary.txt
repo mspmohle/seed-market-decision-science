@@ -1,0 +1,67 @@
+
+============================================================
+USDA Crop Yield Decision Science Study — Summary
+============================================================
+
+Date: October 29, 2025
+
+1. Ask a Question
+-----------------
+How do regional (state-level) and temporal (year-to-year) factors
+influence average crop yields for major U.S. field crops such as corn
+and soybeans?
+
+2. Conduct Background Research
+------------------------------
+Agricultural yields depend on soil quality, climate, and management
+practices.  USDA NASS data provide a reliable multi-year record of
+state-level production statistics.  Previous studies suggest that
+midwestern states consistently outperform others and that yields
+increase gradually with technology adoption.
+
+3. Form a Hypothesis
+--------------------
+We hypothesize that:
+ • Yields are positively correlated with production-intense regions
+   (Midwest states).
+ • Annual improvements in seed genetics and equipment create a small
+   upward trend in yield over time.
+ • State-level differences will remain the strongest predictor.
+
+4. Test the Hypothesis (Experiment / Modeling)
+----------------------------------------------
+A linear regression model was fitted to explain yield variation
+based on year, state, and crop type using USDA NASS data from
+2015–2023.  The model used one-hot encoding for categorical variables
+and an 80/20 train/test split for validation.
+
+5. Analyze the Data
+-------------------
+Model Performance:
+ • MAE   ≈ 9.05
+ • RMSE  ≈ 12.61
+ • R²    ≈ 0.938
+
+Feature Insights:
+Top positive predictors indicate higher yields for states such as
+Iowa and Illinois, while the year coefficient shows a modest upward
+trend (~0.5–1.0 bushel per acre annually).  Correlation analysis
+confirmed that corn and soybean yields move together across most
+regions (ρ ≈ 0.6).
+
+6. Draw a Conclusion
+--------------------
+State-level effects remain the dominant factor in predicting crop
+yields, confirming that geography and local practices outweigh
+national-year effects.  The modest R² suggests non-linear drivers
+(e.g., weather variability) should be modeled next with tree-based or
+ensemble approaches.
+
+Next Steps:
+------------
+ • Integrate NOAA climate variables (rainfall, temperature) to capture
+   weather impacts.
+ • Extend to non-linear models (Random Forest, Gradient Boosting).
+ • Visualize spatial trends using choropleth maps.
+
+============================================================
