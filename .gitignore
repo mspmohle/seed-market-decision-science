@@ -1,0 +1,47 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py.class
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ---- Data ----
+data/raw/
+data/processed/
+data/temp/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# ---- Figures ----
+figures/*.png
+figures/*.jpg
+figures/*.jpeg
+figures/*.svg
+figures/interactive/
+
+# ---- Environment & Dependencies ----
+.env
+*.env
+venv/
+env/
+.venv/
+*.log
+
+# ---- System ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+*.code-workspace
+
+# ---- Backup / Misc ----
+*.bak
+*.tmp
